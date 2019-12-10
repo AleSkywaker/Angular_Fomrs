@@ -10,4 +10,8 @@ export class ContactFormComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  addContact() {
+    console.log(this.model);
+  }
 }
