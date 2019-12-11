@@ -16,5 +16,7 @@ export class ContactFormComponent implements OnInit {
   addContact() {
     console.log(this.model);
     this.contactsService.addContact(this.model);
+    this.model = new Contact(0, "");
+
   }
 }
