@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Contact } from "../../contact.model";
+import { Contact, PhoneType } from "../../contact.model";
 import { ContactsService } from "../../contacts.service";
 
 @Component({
@@ -17,6 +17,5 @@ export class ContactFormComponent implements OnInit {
     console.log(this.model);
     this.contactsService.addContact(this.model);
     this.model = new Contact(0, "");
-
   }
 }
