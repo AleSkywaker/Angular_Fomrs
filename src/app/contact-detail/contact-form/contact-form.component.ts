@@ -9,6 +9,7 @@ import { ContactsService } from "../../contacts.service";
 })
 export class ContactFormComponent implements OnInit {
   public model: Contact = new Contact(0, "");
+  public readonly phoneType: string[] = Object.values()
   constructor(private contactsService: ContactsService) {}
 
   ngOnInit() {}
