@@ -6,7 +6,7 @@
   <div class="form-item">
     <label for="phone-type">Phone</label>
     <select name="" id="phone-type">
-      <option value="" *ngFor=""></option>
+      <option [value]="type" *ngFor="let type of phoneTypes">{{type}}</option>
     </select>
     <input type="tel" id="phone-number">
   </div>
