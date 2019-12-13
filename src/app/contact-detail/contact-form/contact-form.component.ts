@@ -8,7 +8,7 @@ import { ContactsService } from "../../contacts.service";
   styleUrls: ["./contact-form.component.scss"]
 })
 export class ContactFormComponent implements OnInit {
-  public model: Contact = new Contact(0, "");
+  public model: Contact = new Contact(0, "", null, []);
   public readonly phoneTypes: string[] = Object.values(PhoneType);
   constructor(private contactsService: ContactsService) {}
 
