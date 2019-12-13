@@ -3,7 +3,7 @@
     <label for="name">Name: </label>
     <input type="text" id="name" name="name" [(ngModel)]="model.name" required>
   </div>
-  <div class="form-item">
+  <div class="form-item" *ngFor="let phone of model.phones; index as i">
     <label for="phone-type">Phone</label>
     <select name="" id="phone-type">
       <option [value]="type" *ngFor="let type of phoneTypes">{{type}}</option>
