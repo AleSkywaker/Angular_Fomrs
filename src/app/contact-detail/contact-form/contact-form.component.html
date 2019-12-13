@@ -5,7 +5,7 @@
   </div>
   <div class="form-item" *ngFor="let phone of model.phones; index as i">
     <label for="phone-type">Phone</label>
-    <select name="" id="phone-type">
+    <select name="" id="phone-type" [(ngModel)]="model.phones[i].type" name="phone-{{i}}-type">
       <option [value]="type" *ngFor="let type of phoneTypes">{{type}}</option>
     </select>
     <input type="tel" id="phone-number">
