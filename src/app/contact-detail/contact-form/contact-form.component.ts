@@ -19,4 +19,7 @@ export class ContactFormComponent implements OnInit {
     this.contactsService.addContact(this.model);
     this.model = new Contact(0, "");
   }
+  addNewPhoneToModel() {
+    this.model.phones.push({ type: null, number: null });
+  }
 }
