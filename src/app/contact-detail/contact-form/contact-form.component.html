@@ -1,7 +1,7 @@
 <form action="" (ngSubmit)="addContact()">
   <div class="form-item">
     <label for="name">Name: </label>
-    <input type="text" id="name" name="name" [(ngModel)]="model.name" required>
+    <input type="text" id="name" name="name" [(ngModel)]="model.name" required #nameControl>
   </div>
   <div class="form-group">
     <p>Phones</p>
@@ -10,7 +10,7 @@
       <select name="" id="phone-type" [(ngModel)]="model.phones[i].type" name="phone-{{i}}-type">
         <option [value]="type" *ngFor="let type of phoneTypes">{{type}}</option>
       </select>
-      <input type="tel" id="phone-number" [(ngModel)]="model.phones[i].number" name="phone-{{i}}-number" #nameControl>
+      <input type="tel" id="phone-number" [(ngModel)]="model.phones[i].number" name="phone-{{i}}-number">
     </div>
     <p class="form-action" (click)="addNewPhoneToModel()">Add phone +</p>
   </div>
