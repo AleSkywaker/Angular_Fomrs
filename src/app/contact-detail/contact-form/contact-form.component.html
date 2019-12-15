@@ -10,7 +10,7 @@
       <select name="" id="phone-type" [(ngModel)]="model.phones[i].type" name="phone-{{i}}-type">
         <option [value]="type" *ngFor="let type of phoneTypes">{{type}}</option>
       </select>
-      <input type="tel" id="phone-number" [(ngModel)]="model.phones[i].number" name="phone-{{i}}-number">
+      <input type="tel" id="phone-number" [(ngModel)]="model.phones[i].number" name="phone-{{i}}-number" #nameControl>
     </div>
     <p class="form-action" (click)="addNewPhoneToModel()">Add phone +</p>
   </div>
@@ -25,3 +25,4 @@
   <button class="form-button" type="submit">Add contact</button>
 </form>
 <pre>{{model | json}}</pre>
+<p>{{nameControl.}}</p>
