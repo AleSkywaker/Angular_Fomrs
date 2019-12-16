@@ -65,3 +65,9 @@ app-header {
 .ng-invalid:not(form).ng-touched {
   background-color: red;
 }
+
+.ng-valid:not(form)[required] {
+  background: url("assets/check.png");
+  background-position: right;
+  background-repeat: no-repeat;
+}
