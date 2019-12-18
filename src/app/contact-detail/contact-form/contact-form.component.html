@@ -1,4 +1,4 @@
-<form action="" (ngSubmit)="addContact(); contactForm.reset()" #contactForm="ngForm">
+<form action="" (ngSubmit)="addContact()" #contactForm="ngForm">
   <div class="form-item">
     <label for="name">Name: </label>
     <input type="text" id="name" name="name" [(ngModel)]="model.name" required #nameControl="ngModel" minlength="2">
